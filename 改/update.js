@@ -1,4 +1,6 @@
 var mongoose = require('mongoose')
+
+// update 中回调函数不可省略（可以使用.exec()代替）
 mongoose.connect("mongodb://localhost:27017/insert", function(err) {
     if (!err) {
         var schma = new mongoose.Schema({age: Number, name: String})
